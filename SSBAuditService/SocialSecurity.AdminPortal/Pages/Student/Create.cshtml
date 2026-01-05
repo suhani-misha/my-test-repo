@@ -1,0 +1,83 @@
+@page
+@model SocialSecurity.AdminPortal.Pages_Student.CreateModel
+
+        @{
+        ViewData["Title"] = "Create";
+        }
+        
+        
+    <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+    <div class="breadcrumb-title pe-3"><a asp-page="Index">Student List</a></div>
+    <div class="ps-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item">
+                    <a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Settings</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+      <div class="row">
+          <div class="col-xxl-12">
+            <div class="card w-100 overflow-hidden rounded-4">
+              <div class="card-body position-relative p-4">
+    <h4>Student</h4>
+    <form method="post">
+     <div class="row">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <span class="text-danger">*</span>
+                <label asp-for="Student.Name" class="control-label mb-2"></label>
+                <input asp-for="Student.Name" class="form-control" />
+                <span asp-validation-for="Student.Name" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <span class="text-danger">*</span>
+                <label asp-for="Student.Email" class="control-label mb-2"></label>
+                <input asp-for="Student.Email" class="form-control" />
+                <span asp-validation-for="Student.Email" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <span class="text-danger">*</span>
+                <label asp-for="Student.PhoneNumber" class="control-label mb-2"></label>
+                <input asp-for="Student.PhoneNumber" class="form-control" />
+                <span asp-validation-for="Student.PhoneNumber" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <span class="text-danger">*</span>
+                <label asp-for="Student.CollegeName" class="control-label mb-2"></label>
+                <input asp-for="Student.CollegeName" class="form-control" />
+                <span asp-validation-for="Student.CollegeName" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <span class="text-danger">*</span>
+                <label asp-for="Student.RollNo" class="control-label mb-2"></label>
+                <input asp-for="Student.RollNo" class="form-control" />
+                <span asp-validation-for="Student.RollNo" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                   <label class="control-label mb-2 d-block"> &nbsp;</label>
+                <input type="submit" value="Save" class="btn btn-grd-primary" />
+            </div>
+            </div>
+             </div>
+        </form>
+   
+    </div>
+    </div>
+    </div>
+</div>
+

@@ -1,0 +1,102 @@
+@page
+@model SocialSecurity.AdminPortal.Pages_Currency.CreateModel
+
+        @{
+        ViewData["Title"] = "Create";
+        }
+        
+        
+    <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+    <div class="breadcrumb-title pe-3"><a asp-page="Index">Currency List</a></div>
+    <div class="ps-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item">
+                    <a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Settings</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+      <div class="row">
+          <div class="col-xxl-12">
+            <div class="card w-100 overflow-hidden rounded-4">
+              <div class="card-body position-relative p-4">
+    <h4>Currency</h4>
+    <form method="post">
+     <div class="row">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <span class="text-danger">*</span>
+                <label asp-for="Currency.Name" class="control-label mb-2"></label>
+                <input asp-for="Currency.Name" class="form-control" />
+                <span asp-validation-for="Currency.Name" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <span class="text-danger">*</span>
+                <label asp-for="Currency.Symbol" class="control-label mb-2"></label>
+                <input asp-for="Currency.Symbol" class="form-control" />
+                <span asp-validation-for="Currency.Symbol" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <span class="text-danger">*</span>
+                <label asp-for="Currency.ExchangeRate" class="control-label mb-2"></label>
+                <input asp-for="Currency.ExchangeRate" class="form-control" />
+                <span asp-validation-for="Currency.ExchangeRate" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <label asp-for="Currency.Status" class="control-label mb-2"></label>
+                <select asp-for="Currency.Status" class="form-control"></select>
+                <span asp-validation-for="Currency.Status" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <label asp-for="Currency.CreatedOn" class="control-label mb-2"></label>
+                <input asp-for="Currency.CreatedOn" class="form-control" />
+                <span asp-validation-for="Currency.CreatedOn" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <label asp-for="Currency.CreatedBy" class="control-label mb-2"></label>
+                <input asp-for="Currency.CreatedBy" class="form-control" />
+                <span asp-validation-for="Currency.CreatedBy" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <label asp-for="Currency.ModifiedOn" class="control-label mb-2"></label>
+                <input asp-for="Currency.ModifiedOn" class="form-control" />
+                <span asp-validation-for="Currency.ModifiedOn" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <label asp-for="Currency.ModifiedBy" class="control-label mb-2"></label>
+                <input asp-for="Currency.ModifiedBy" class="form-control" />
+                <span asp-validation-for="Currency.ModifiedBy" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                   <label class="control-label mb-2 d-block"> &nbsp;</label>
+                <input type="submit" value="Save" class="btn btn-grd-primary" />
+            </div>
+            </div>
+             </div>
+        </form>
+   
+    </div>
+    </div>
+    </div>
+</div>
+

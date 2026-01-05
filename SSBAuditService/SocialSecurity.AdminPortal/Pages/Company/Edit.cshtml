@@ -1,0 +1,105 @@
+@page
+@model SocialSecurity.AdminPortal.Pages_Company.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Company</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Company.Id" />
+            <div class="form-group mb-3">
+                <span class="text-danger">*</span>
+                <label asp-for="Company.Name" class="control-label"></label>
+                <input asp-for="Company.Name" class="form-control" />
+                <span asp-validation-for="Company.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <span class="text-danger">*</span>
+                <label asp-for="Company.PhoneNumber" class="control-label"></label>
+                <input asp-for="Company.PhoneNumber" class="form-control" />
+                <span asp-validation-for="Company.PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <span class="text-danger">*</span>
+                <label asp-for="Company.Email" class="control-label"></label>
+                <input asp-for="Company.Email" class="form-control" />
+                <span asp-validation-for="Company.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                
+                <label asp-for="Company.Description" class="control-label"></label>
+                <input asp-for="Company.Description" class="form-control" />
+                <span asp-validation-for="Company.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <span class="text-danger">*</span>
+                <label asp-for="Company.GST" class="control-label"></label>
+                <input asp-for="Company.GST" class="form-control" />
+                <span asp-validation-for="Company.GST" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <span class="text-danger">*</span>
+                <label asp-for="Company.City" class="control-label"></label>
+                <input asp-for="Company.City" class="form-control" />
+                <span asp-validation-for="Company.City" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <span class="text-danger">*</span>
+                <label asp-for="Company.PostalCode" class="control-label"></label>
+                <input asp-for="Company.PostalCode" class="form-control" />
+                <span asp-validation-for="Company.PostalCode" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                
+                <label asp-for="Company.WebsiteUrl" class="control-label"></label>
+                <input asp-for="Company.WebsiteUrl" class="form-control" />
+                <span asp-validation-for="Company.WebsiteUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                
+                <label asp-for="Company.Status" class="control-label"></label>
+                <select asp-for="Company.Status" class="form-control"></select>
+                <span asp-validation-for="Company.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                
+                <label asp-for="Company.CreatedOn" class="control-label"></label>
+                <input asp-for="Company.CreatedOn" class="form-control" />
+                <span asp-validation-for="Company.CreatedOn" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                
+                <label asp-for="Company.CreatedBy" class="control-label"></label>
+                <input asp-for="Company.CreatedBy" class="form-control" />
+                <span asp-validation-for="Company.CreatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                
+                <label asp-for="Company.ModifiedOn" class="control-label"></label>
+                <input asp-for="Company.ModifiedOn" class="form-control" />
+                <span asp-validation-for="Company.ModifiedOn" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                
+                <label asp-for="Company.ModifiedBy" class="control-label"></label>
+                <input asp-for="Company.ModifiedBy" class="form-control" />
+                <span asp-validation-for="Company.ModifiedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+

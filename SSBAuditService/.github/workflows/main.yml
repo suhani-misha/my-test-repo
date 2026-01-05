@@ -1,0 +1,56 @@
+name: Deploy SocialSecurity Web API via FTP
+
+on:
+  workflow_dispatch:   # Manual trigger from GitHub Actions tab
+  push:
+    branches:
+      - "Feature/Holyday-Endpoints"  # Automatically deploy on push to this branch
+
+jobs:
+  build-and-deploy:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore SocialSecurity.WebApi/SocialSecurity.WebApi.csproj
+
+      - name: Build Web API
+        run: dotnet build SocialSecurity.WebApi/SocialSecurity.WebApi.csproj --configuration Release --no-restore
+
+      - name: Clean publish folder
+        run: |
+          if (Test-Path ./publish) { Remove-Item ./publish -Recurse -Force }
+
+      - name: Publish Web API
+        run: dotnet publish SocialSecurity.WebApi/SocialSecurity.WebApi.csproj --configuration Release --output ./publish --no-build
+
+      - name: Ensure correct web.config
+        run: |
+          echo '<?xml version="1.0" encoding="utf-8"?>
+          <configuration>
+            <location path="." inheritInChildApplications="false">
+              <system.webServer>
+                <handlers>
+                  <add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModuleV2" resourceType="Unspecified" />
+                </handlers>
+                <aspNetCore processPath="dotnet" arguments=".\SocialSecurity.WebApi.dll" stdoutLogEnabled="true" stdoutLogFile=".\logs\stdout" hostingModel="inprocess" />
+              </system.webServer>
+            </location>
+          </configuration>' > ./publish/web.config
+
+      - name: Deploy to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./publish/
+          server-dir: /

@@ -1,0 +1,140 @@
+@page
+@model SocialSecurity.AdminPortal.Pages_Company.CreateModel
+
+        @{
+        ViewData["Title"] = "Create";
+        }
+        
+        
+    <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+    <div class="breadcrumb-title pe-3"><a asp-page="Index">Company List</a></div>
+    <div class="ps-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item">
+                    <a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Settings</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+      <div class="row">
+          <div class="col-xxl-12">
+            <div class="card w-100 overflow-hidden rounded-4">
+              <div class="card-body position-relative p-4">
+    <h4>Company</h4>
+    <form method="post">
+     <div class="row">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <span class="text-danger">*</span>
+                <label asp-for="Company.Name" class="control-label mb-2"></label>
+                <input asp-for="Company.Name" class="form-control" />
+                <span asp-validation-for="Company.Name" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <span class="text-danger">*</span>
+                <label asp-for="Company.PhoneNumber" class="control-label mb-2"></label>
+                <input asp-for="Company.PhoneNumber" class="form-control" />
+                <span asp-validation-for="Company.PhoneNumber" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <span class="text-danger">*</span>
+                <label asp-for="Company.Email" class="control-label mb-2"></label>
+                <input asp-for="Company.Email" class="form-control" />
+                <span asp-validation-for="Company.Email" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <label asp-for="Company.Description" class="control-label mb-2"></label>
+                <input asp-for="Company.Description" class="form-control" />
+                <span asp-validation-for="Company.Description" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <span class="text-danger">*</span>
+                <label asp-for="Company.GST" class="control-label mb-2"></label>
+                <input asp-for="Company.GST" class="form-control" />
+                <span asp-validation-for="Company.GST" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <span class="text-danger">*</span>
+                <label asp-for="Company.City" class="control-label mb-2"></label>
+                <input asp-for="Company.City" class="form-control" />
+                <span asp-validation-for="Company.City" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <span class="text-danger">*</span>
+                <label asp-for="Company.PostalCode" class="control-label mb-2"></label>
+                <input asp-for="Company.PostalCode" class="form-control" />
+                <span asp-validation-for="Company.PostalCode" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <label asp-for="Company.WebsiteUrl" class="control-label mb-2"></label>
+                <input asp-for="Company.WebsiteUrl" class="form-control" />
+                <span asp-validation-for="Company.WebsiteUrl" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <label asp-for="Company.Status" class="control-label mb-2"></label>
+                <select asp-for="Company.Status" class="form-control"></select>
+                <span asp-validation-for="Company.Status" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <label asp-for="Company.CreatedOn" class="control-label mb-2"></label>
+                <input asp-for="Company.CreatedOn" class="form-control" />
+                <span asp-validation-for="Company.CreatedOn" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <label asp-for="Company.CreatedBy" class="control-label mb-2"></label>
+                <input asp-for="Company.CreatedBy" class="form-control" />
+                <span asp-validation-for="Company.CreatedBy" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <label asp-for="Company.ModifiedOn" class="control-label mb-2"></label>
+                <input asp-for="Company.ModifiedOn" class="form-control" />
+                <span asp-validation-for="Company.ModifiedOn" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                <label asp-for="Company.ModifiedBy" class="control-label mb-2"></label>
+                <input asp-for="Company.ModifiedBy" class="form-control" />
+                <span asp-validation-for="Company.ModifiedBy" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group mb-3">
+                   <label class="control-label mb-2 d-block"> &nbsp;</label>
+                <input type="submit" value="Save" class="btn btn-grd-primary" />
+            </div>
+            </div>
+             </div>
+        </form>
+   
+    </div>
+    </div>
+    </div>
+</div>
+

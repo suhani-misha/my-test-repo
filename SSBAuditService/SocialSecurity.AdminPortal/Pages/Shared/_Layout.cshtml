@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - T4</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/T4.styles.css" asp-append-version="true" />
+    <link rel="icon" href="assets/images/favicon-32x32.png" type="image/png">
+    <!-- loader-->
+    <link href="/assets/css/pace.min.css" rel="stylesheet">
+    <script src="/assets/js/pace.min.js"></script>
+    <!--plugins-->
+    <link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/plugins/metismenu/metisMenu.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/plugins/metismenu/mm-vertical.css">
+    <link rel="stylesheet" type="text/css" href="/assets/plugins/simplebar/css/simplebar.css">
+    <!--bootstrap css-->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+    <!--main css-->
+    <link href="/assets/css/bootstrap-extended.css" rel="stylesheet">
+    <link href="/sass/main.css" rel="stylesheet">
+    <link href="/sass/responsive.css" rel="stylesheet">
+</head>
+<body>
+    <header class="top-header">
+        <nav class="navbar navbar-expand align-items-center gap-4">
+            <div class="btn-toggle">
+                <a href="javascript:;"><i class="material-icons-outlined">menu</i></a>
+            </div>
+            <div class="search-bar flex-grow-1">
+                <div class="position-relative d-none">
+                    <input class="form-control rounded-5 px-5 search-control d-lg-block d-none" type="text" placeholder="Search">
+                    <span class="material-icons-outlined position-absolute d-lg-block d-none ms-3 translate-middle-y start-0 top-50">search</span>
+                    <span class="material-icons-outlined position-absolute me-3 translate-middle-y end-0 top-50 search-close">close</span>
+                    <div class="search-popup p-3">
+                        <div class="card rounded-4 overflow-hidden">
+                            <div class="card-header d-lg-none">
+                                <div class="position-relative">
+                                    <input class="form-control rounded-5 px-5 mobile-search-control" type="text" placeholder="Search">
+                                    <span class="material-icons-outlined position-absolute ms-3 translate-middle-y start-0 top-50">search</span>
+                                    <span class="material-icons-outlined position-absolute me-3 translate-middle-y end-0 top-50 mobile-search-close">close</span>
+                                </div>
+                            </div>
+                            <div class="card-body search-content">
+                                <p class="search-title">Recent Searches</p>
+
+                                <hr>
+                                <p class="search-title">Tutorials</p>
+
+
+                                <hr>
+                                <p class="search-title">Members</p>
+
+
+                            </div>
+                            <div class="card-footer text-center bg-transparent">
+                                <a href="javascript:;" class="btn w-100">See All Search Results</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="navbar-nav gap-1 nav-right-links align-items-center">
+                <li class="nav-item d-lg-none mobile-search-btn">
+                    <a class="nav-link" href="javascript:;"><i class="material-icons-outlined">search</i></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="avascript:;" data-bs-toggle="dropdown">
+                        <img src="assets/images/county/02.png" width="22" alt="">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/01.png" width="20" alt=""><span class="ms-2">English</span></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/02.png" width="20" alt=""><span class="ms-2">Catalan</span></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/03.png" width="20" alt=""><span class="ms-2">French</span></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/04.png" width="20" alt=""><span class="ms-2">Belize</span></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/05.png" width="20" alt=""><span class="ms-2">Colombia</span></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/06.png" width="20" alt=""><span class="ms-2">Spanish</span></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/07.png" width="20" alt=""><span class="ms-2">Georgian</span></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/08.png" width="20" alt=""><span class="ms-2">Hindi</span></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/12.png" width="20" alt=""><span class="ms-2">Chinese</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" data-bs-auto-close="outside"
+                       data-bs-toggle="dropdown" href="javascript:;">
+                        <i class="material-icons-outlined">notifications</i>
+                        <span class="badge-notify">5</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-notify dropdown-menu-end shadow">
+                        <div class="px-3 py-1 d-flex align-items-center justify-content-between border-bottom">
+                            <h5 class="notiy-title mb-0">Notifications</h5>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle dropdown-toggle-nocaret option" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="material-icons-outlined">
+                                        more_vert
+                                    </span>
+                                </button>
+                                <div class="dropdown-menu dropdown-option dropdown-menu-end shadow">
+                                    <div>
+                                        <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;">
+                                            <i class="material-icons-outlined fs-6">inventory_2</i>Archive All
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;">
+                                            <i class="material-icons-outlined fs-6">done_all</i>Mark all as read
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;">
+                                            <i class="material-icons-outlined fs-6">mic_off</i>Disable Notifications
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;">
+                                            <i class="material-icons-outlined fs-6">grade</i>What's new ?
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <hr class="dropdown-divider">
+                                    </div>
+                                    <div>
+                                        <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;">
+                                            <i class="material-icons-outlined fs-6">leaderboard</i>Reports
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notify-list">
+                            <div>
+                                <a class="dropdown-item border-bottom py-2" href="javascript:;">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="">
+                                            <img src="assets/images/avatars/01.png" class="rounded-circle" width="45" height="45" alt="">
+                                        </div>
+                                        <div class="">
+                                            <h5 class="notify-title">Congratulations Jhon</h5>
+                                            <p class="mb-0 notify-desc">Many congtars jhon. You have won the gifts.</p>
+                                            <p class="mb-0 notify-time">Today</p>
+                                        </div>
+                                        <div class="notify-close position-absolute end-0 me-3">
+                                            <i class="material-icons-outlined fs-6">close</i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a class="dropdown-item border-bottom py-2" href="javascript:;">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="user-wrapper bg-primary text-primary bg-opacity-10">
+                                            <span>RS</span>
+                                        </div>
+                                        <div class="">
+                                            <h5 class="notify-title">New Account Created</h5>
+                                            <p class="mb-0 notify-desc">From USA an user has registered.</p>
+                                            <p class="mb-0 notify-time">Yesterday</p>
+                                        </div>
+                                        <div class="notify-close position-absolute end-0 me-3">
+                                            <i class="material-icons-outlined fs-6">close</i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a class="dropdown-item border-bottom py-2" href="javascript:;">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="">
+                                            <img src="assets/images/apps/13.png" class="rounded-circle" width="45" height="45" alt="">
+                                        </div>
+                                        <div class="">
+                                            <h5 class="notify-title">Payment Recived</h5>
+                                            <p class="mb-0 notify-desc">New payment recived successfully</p>
+                                            <p class="mb-0 notify-time">1d ago</p>
+                                        </div>
+                                        <div class="notify-close position-absolute end-0 me-3">
+                                            <i class="material-icons-outlined fs-6">close</i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a class="dropdown-item border-bottom py-2" href="javascript:;">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="">
+                                            <img src="assets/images/apps/14.png" class="rounded-circle" width="45" height="45" alt="">
+                                        </div>
+                                        <div class="">
+                                            <h5 class="notify-title">New Order Recived</h5>
+                                            <p class="mb-0 notify-desc">Recived new order from michle</p>
+                                            <p class="mb-0 notify-time">2:15 AM</p>
+                                        </div>
+                                        <div class="notify-close position-absolute end-0 me-3">
+                                            <i class="material-icons-outlined fs-6">close</i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a class="dropdown-item border-bottom py-2" href="javascript:;">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="">
+                                            <img src="assets/images/avatars/06.png" class="rounded-circle" width="45" height="45" alt="">
+                                        </div>
+                                        <div class="">
+                                            <h5 class="notify-title">Congratulations Jhon</h5>
+                                            <p class="mb-0 notify-desc">Many congtars jhon. You have won the gifts.</p>
+                                            <p class="mb-0 notify-time">Today</p>
+                                        </div>
+                                        <div class="notify-close position-absolute end-0 me-3">
+                                            <i class="material-icons-outlined fs-6">close</i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a class="dropdown-item py-2" href="javascript:;">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="user-wrapper bg-danger text-danger bg-opacity-10">
+                                            <span>PK</span>
+                                        </div>
+                                        <div class="">
+                                            <h5 class="notify-title">New Account Created</h5>
+                                            <p class="mb-0 notify-desc">From USA an user has registered.</p>
+                                            <p class="mb-0 notify-time">Yesterday</p>
+                                        </div>
+                                        <div class="notify-close position-absolute end-0 me-3">
+                                            <i class="material-icons-outlined fs-6">close</i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--<li class="nav-item d-md-flex d-none">
+                  <a class="nav-link position-relative" data-bs-toggle="offcanvas" href="#offcanvasCart"><i
+                      class="material-icons-outlined">shopping_cart</i>
+                    <span class="badge-notify">8</span>
+                  </a>
+                </li>-->
+                <li class="nav-item dropdown">
+                    <a href="javascrpt:;" class="dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown">
+                        <img src="assets/images/avatars/01.png" class="rounded-circle p-1 border" width="45" height="45" alt="">
+                    </a>
+                    <div class="dropdown-menu dropdown-user dropdown-menu-end shadow">
+                        <a class="dropdown-item  gap-2 py-2" href="javascript:;">
+                            <div class="text-center">
+                                <img src="assets/images/avatars/01.png" class="rounded-circle p-1 shadow mb-3" width="90" height="90"
+                                     alt="">
+                                <h5 class="user-name mb-0 fw-bold">Hello, Jhon</h5>
+                            </div>
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;">
+                            <i class="material-icons-outlined">person_outline</i>Profile
+                        </a>
+                        <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;">
+                            <i class="material-icons-outlined">local_bar</i>Setting
+                        </a>
+                        <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;">
+                            <i class="material-icons-outlined">dashboard</i>Dashboard
+                        </a>
+                        <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;">
+                            <i class="material-icons-outlined">account_balance</i>Earning
+                        </a>
+                        <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;">
+                            <i class="material-icons-outlined">cloud_download</i>Downloads
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;">
+                            <i class="material-icons-outlined">power_settings_new</i>Logout
+                        </a>
+                    </div>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+        <aside class="sidebar-wrapper" data-simplebar="true">
+            <div class="sidebar-header">
+                <div class="logo-icon">
+                    <img src="assets/images/logo-icon.png" class="logo-img" alt="">
+                </div>
+                <div class="logo-name flex-grow-1">
+                    <h5 class="mb-0">T4 Template</h5>
+                </div>
+                <div class="sidebar-close">
+                    <span class="material-icons-outlined">close</span>
+                </div>
+            </div>
+            <div class="sidebar-nav">
+                <!--navigation-->
+                <ul class="metismenu" id="sidenav">
+                    <li>
+                        <a href="/Company">
+                            <div class="parent-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                                    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z" />
+                                </svg>
+                            </div>
+                            <div class="menu-title">Company</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Employee">
+                            <div class="parent-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user-plus"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+                            </div>
+                            <div class="menu-title">Employee</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/Student">
+                            <div class="parent-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                            </div>
+                            <div class="menu-title">Student</div>
+                        </a>
+                    </li>
+                <li>
+                    <a href="/Currency">
+                        <div class="parent-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                        </div>
+                        <div class="menu-title">Currency</div>
+                    </a>
+                </li>
+                </ul>
+                <!--end navigation-->
+            </div>
+        </aside>
+
+    <main class="main-wrapper">
+        <div class="main-content">
+     
+            @RenderBody()
+      
+    </div>
+    </main>
+
+  
+   @*  <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - T4 - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer> *@
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <!--plugins-->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+    <script src="/assets/plugins/metismenu/metisMenu.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html> 
